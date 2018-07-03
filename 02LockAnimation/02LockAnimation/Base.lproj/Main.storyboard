@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_2LockAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="topLock" translatesAutoresizingMaskIntoConstraints="NO" id="jON-L5-sf3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="333.5"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bottomLock" translatesAutoresizingMaskIntoConstraints="NO" id="A1b-4v-2Vl">
+                                <rect key="frame" x="0.0" y="333.5" width="375" height="333.5"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lockBorder" translatesAutoresizingMaskIntoConstraints="NO" id="DVk-Nh-xVR">
+                                <rect key="frame" x="137" y="283.5" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Elt-fd-W9V"/>
+                                    <constraint firstAttribute="width" constant="100" id="lLh-OF-Te4"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lockKeyhole" translatesAutoresizingMaskIntoConstraints="NO" id="pw1-Xi-tGD">
+                                <rect key="frame" x="162" y="308.5" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="FLD-bK-Wld"/>
+                                    <constraint firstAttribute="height" constant="50" id="jFG-JO-rMC"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="jON-L5-sf3" secondAttribute="trailing" id="1bW-OB-bxh"/>
+                            <constraint firstItem="A1b-4v-2Vl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="A0I-Wf-47k"/>
+                            <constraint firstItem="jON-L5-sf3" firstAttribute="height" secondItem="A1b-4v-2Vl" secondAttribute="height" id="CFe-ej-MmI"/>
+                            <constraint firstItem="pw1-Xi-tGD" firstAttribute="centerX" secondItem="DVk-Nh-xVR" secondAttribute="centerX" id="Gmq-eh-oC4"/>
+                            <constraint firstItem="jON-L5-sf3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="IlY-dN-kpr"/>
+                            <constraint firstItem="pw1-Xi-tGD" firstAttribute="centerY" secondItem="DVk-Nh-xVR" secondAttribute="centerY" id="KJy-Yi-cyY"/>
+                            <constraint firstItem="DVk-Nh-xVR" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-10" id="MvW-kO-07N"/>
+                            <constraint firstItem="A1b-4v-2Vl" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Zpv-gZ-z6E"/>
+                            <constraint firstItem="DVk-Nh-xVR" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="f1h-39-kU4"/>
+                            <constraint firstItem="jON-L5-sf3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hSU-nP-bBb"/>
+                            <constraint firstItem="A1b-4v-2Vl" firstAttribute="top" secondItem="jON-L5-sf3" secondAttribute="bottom" id="mew-Hx-D9Z"/>
+                            <constraint firstItem="A1b-4v-2Vl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="paK-i4-6Ly"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="bottomLock" destination="A1b-4v-2Vl" id="1RW-3w-7gM"/>
+                        <outlet property="lockBoder" destination="DVk-Nh-xVR" id="nuo-qh-wGP"/>
+                        <outlet property="lockKeyhole" destination="pw1-Xi-tGD" id="WM6-gp-NJY"/>
+                        <outlet property="topLock" destination="jON-L5-sf3" id="NqD-h8-Z09"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bottomLock" width="4184" height="2118"/>
+        <image name="lockBorder" width="802" height="800"/>
+        <image name="lockKeyhole" width="496" height="496"/>
+        <image name="topLock" width="4183" height="2117"/>
+    </resources>
+</document>
